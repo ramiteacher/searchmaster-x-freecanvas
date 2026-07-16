@@ -39,6 +39,12 @@
     background:var(--카드); border-radius:22px; overflow:hidden;
     box-shadow:var(--그늘); border:1px solid rgba(255,255,255,.75);
     padding:56px 62px; display:flex; flex-direction:column}
+  .판::before{content:""; position:absolute; left:0; right:0; top:0; height:3px; z-index:6;
+    background:linear-gradient(90deg, transparent, rgba(169,132,73,.5) 18%, rgba(169,132,73,.85) 50%, rgba(169,132,73,.5) 82%, transparent)}
+  .짙판::after, .구분판::after{content:""; position:absolute; inset:15px; border-radius:13px;
+    pointer-events:none; z-index:5}
+  .짙판::after{border:1px solid rgba(205,185,138,.32)}
+  .구분판::after{border:1px solid rgba(169,132,73,.26)}
 
   /* 공통 타이포 */
   h1,h2,h3{font-family:var(--제목); font-weight:700; letter-spacing:-.02em}
@@ -258,11 +264,11 @@
             <div class="이름">검색마스터 <i>×</i> 프리캔버스 AI</div>
           </div>
           <div class="소제" style="margin-top:34px">온라인셀러를 위한 두 개의 AI</div>
-          <h1 class="표지제">검색에 걸리고,<br>클릭이 <span class="금">구매</span>가<br>되는 곳까지.</h1>
-          <p class="표지리드">상품명부터 상세페이지·영상·카드뉴스까지 —<br>여름 업데이트로 한층 깊어진 두 서비스를 소개합니다.</p>
+          <h1 class="표지제">검색에 걸리는 <span class="금">이름</span>,<br>구매로 이어지는 <span class="금">화면</span>.</h1>
+          <p class="표지리드">상품명부터 상세페이지·영상·카드뉴스까지,<br>이번 여름 한층 깊어진 두 서비스를 소개합니다.</p>
           <div class="표지칩들">
-            <span class="표지칩">유월 스무날 이후 새 기능</span>
-            <span class="표지칩">실제 화면으로 보기</span>
+            <span class="표지칩">2026 여름 업데이트</span>
+            <span class="표지칩">실제 화면 수록</span>
           </div>
         </div>
         <div class="무대">
@@ -299,7 +305,7 @@
           <p>들어온 고객이 스크롤을 내리다 결제 버튼을 누르게 해야 합니다.<br>이 싸움은 <b>프리캔버스</b>가 맡습니다.</p>
         </div>
       </div>
-      <p class="리드" style="text-align:center; margin-top:26px">아무리 좋은 물건도 <b>안 보이면</b> 없는 상품이고, <b>안 사고 싶으면</b> 스쳐 가는 상품입니다.</p>
+      <p class="리드" style="text-align:center; margin-top:26px">아무리 좋은 물건도 <b>보이지 않으면</b> 없는 상품이고, <b>마음을 움직이지 못하면</b> 스쳐 가는 상품입니다.</p>
       <div class="바닥"><span class="상표"><b>검색마스터</b> × 프리캔버스 AI</span><span class="쪽">2 / 17</span></div>
     </div>
   </section>
@@ -308,7 +314,7 @@
   <section class="장" id="s3">
     <div class="판">
       <div class="소제">한눈에 보기</div>
-      <h2 class="큰제">따로 노는 두 앱이 아니라,<br><span class="강">이어지는 한 벌</span>의 도구입니다.</h2>
+      <h2 class="큰제">따로 쓰는 두 개의 앱이 아니라,<br>하나로 <span class="강">이어지는 한 벌</span>의 도구입니다.</h2>
       <div class="흐름" style="margin-top:30px; flex:1; align-items:center">
         <figure class="액자">
           <div class="창틀"><i></i><i></i><i></i><span class="주소">검색마스터 — 상품명 생성기</span></div>
@@ -327,7 +333,7 @@
       </div>
       <p class="리드" style="text-align:center; margin-top:24px">
         <b>검색마스터</b>가 <b>이름</b>을 짓고, <b>프리캔버스</b>가 <b>모습</b>을 만듭니다.<br>
-        오늘은 <span class="금강">유월 스무날 이후 새로 생긴 것들</span>을 실제 화면으로 보여드립니다.</p>
+        오늘은 <span class="금강">이번 여름 새로 더해진 기능들</span>을 실제 화면으로 보여드립니다.</p>
       <div class="바닥"><span class="상표"><b>검색마스터</b> × 프리캔버스 AI</span><span class="쪽">3 / 17</span></div>
     </div>
   </section>
@@ -339,7 +345,7 @@
         <div class="구분좌">
           <div class="장표">제 일 장</div>
           <h2 class="구분제">검색에 걸리는<br>이름 짓기</h2>
-          <p class="구분리드">검색마스터 — 사진 한 장과 설명 몇 줄로, 노출되는 상품명을 완성합니다.</p>
+          <p class="구분리드">검색마스터 — 사진 한 장과 설명 한 줄로, 검색에 닿는 상품명을 완성합니다.</p>
         </div>
         <div class="큰숫자">1</div>
       </div>
@@ -356,13 +362,13 @@
           <ul class="기능목">
             <li><span class="번호">하나</span>
               <div><h4>실제 상품·용도 설명 입력</h4>
-              <p>"책상 위에 놓는 무선 충전 겸용 스탠드"처럼 한 줄만 보태면, 사진만으로 놓치던 재질·용도까지 상품명에 정확히 담깁니다.</p></div></li>
+              <p>"책상 위에 놓는 무선 충전 겸용 스탠드"처럼 한 줄만 보태면, 사진만으로는 놓치기 쉬운 재질과 용도까지 상품명에 정확히 담깁니다.</p></div></li>
             <li><span class="번호">둘</span>
               <div><h4>판매 채널별 이름 전략</h4>
               <p>네이버쇼핑은 검색 노출 폭, 쿠팡은 구매 판단 키워드, 일반몰은 가독성 — 채널을 고르면 그 문법대로 짓습니다.</p></div></li>
             <li><span class="번호">셋</span>
               <div><h4>기다림 없는 화면</h4>
-              <p>사진을 올리면 바로 보이고, 만드는 동안 진행 상태가 또렷하게 표시됩니다. 답답함을 걷어냈습니다.</p></div></li>
+              <p>사진을 올리면 바로 보이고, 생성 과정이 화면에 그대로 표시되어 기다림이 지루하지 않습니다.</p></div></li>
           </ul>
         </div>
         <div class="모둠">
@@ -385,7 +391,7 @@
         <div class="구분좌">
           <div class="장표">제 이 장</div>
           <h2 class="구분제">사고 싶게 만드는<br>콘텐츠 공방</h2>
-          <p class="구분리드">프리캔버스 — 소싱한 재료가 상세페이지·영상·카드뉴스가 되기까지, 손이 갈 일을 줄였습니다.</p>
+          <p class="구분리드">프리캔버스 — 소싱한 재료가 상세페이지·영상·카드뉴스가 되기까지, 손길이 가던 일들을 덜어냈습니다.</p>
         </div>
         <div class="큰숫자">2</div>
       </div>
@@ -419,7 +425,7 @@
             <p style="font-size:12px; color:var(--회록); line-height:1.55; margin-top:2px">중국 상품 영상을 한국어 자막·더빙 영상으로 바꿉니다.</p>
           </div>
           <p style="font-size:12.5px; color:var(--잉크연); line-height:1.6; margin-top:4px; word-break:keep-all">
-            결과물도 다섯 갈래 — 일반·의류·과일채소 상세페이지에 <b>카드뉴스</b>와 <b>상품 썸네일</b>까지 한 곳에서 나옵니다. →</p>
+            일반·의류·과일채소 상세페이지에 <b>카드뉴스</b>와 <b>상품 썸네일</b>까지 — 다섯 갈래 결과물이 한 곳에서 나옵니다.</p>
         </div>
         <div class="모둠" style="min-height:0; height:100%">
           <figure class="액자" style="width:196px; flex-shrink:0">
@@ -442,13 +448,13 @@
           <ul class="기능목">
             <li><span class="번호">하나</span>
               <div><h4>스마트스토어·1688 링크 불러오기</h4>
-              <p>상품 주소만 붙여넣으면 작은 새 창이 열려 상세 내용과 상품 이미지를 통째로 가져옵니다. 가격 정보는 알아서 뺍니다.</p></div></li>
+              <p>상품 주소만 붙여넣으면 작은 새 창이 열려 상세 내용과 상품 이미지를 통째로 가져옵니다. 가격 정보는 자동으로 걸러냅니다.</p></div></li>
             <li><span class="번호">둘</span>
               <div><h4>확장 프로그램 한 번 설치로 끝</h4>
-              <p>웹스토어 단추와 설치법 안내가 화면 안에 있어, 처음 한 번만 따라 하면 다음부터는 붙여넣기만 하면 됩니다.</p></div></li>
+              <p>웹스토어 단추와 설치 안내가 화면 안에 있어, 처음 한 번만 설치해 두면 다음부터는 붙여넣기만으로 충분합니다.</p></div></li>
             <li><span class="번호">셋</span>
               <div><h4>중국어 정리까지 자동</h4>
-              <p>1688에서 가져온 문구의 중국어와 군더더기 값을 한국어 기준으로 다듬어 줍니다.</p></div></li>
+              <p>1688에서 가져온 문구 속 중국어와 불필요한 표기를 한국어 기준으로 매만져 줍니다.</p></div></li>
           </ul>
         </div>
         <div class="모둠">
@@ -477,10 +483,10 @@
               <p>영상 속 중국어 문구 자리를 찾아 지우고 그 자리에 자연스러운 한국어 자막을 얹습니다.</p></div></li>
             <li><span class="번호">둘</span>
               <div><h4>한국어 음성 더빙</h4>
-              <p>자막에 맞춰 우리말 음성까지 입혀, 소리 켜고 보는 영상으로 완성합니다.</p></div></li>
+              <p>자막에 맞춰 우리말 음성을 입혀, 소리까지 완전한 한국어 영상으로 만듭니다.</p></div></li>
             <li><span class="번호">셋</span>
               <div><h4>세로 영상으로 저장</h4>
-              <p>쇼츠·릴스에 바로 올리는 세로 화면 비율로 저장하고, 자막 파일도 함께 나옵니다.</p></div></li>
+              <p>쇼츠·릴스에 바로 올릴 수 있는 세로 비율로 저장되며, 자막 파일도 함께 제공됩니다.</p></div></li>
           </ul>
         </div>
         <div class="모둠">
@@ -512,7 +518,7 @@
               <p>나뉜 위치가 아쉬우면 경계선을 마우스로 끌어 원하는 지점에서 다시 자릅니다.</p></div></li>
             <li><span class="번호">셋</span>
               <div><h4>그림 속 글자도 고쳐 쓰기</h4>
-              <p>이미지 안 문구를 골라 내용을 바꾸고 글꼴을 고르면, 고른 글꼴 그대로 다시 그려냅니다.</p></div></li>
+              <p>이미지 속 문구를 골라 내용을 고치고 글꼴을 정하면, 그 모습 그대로 다시 그려냅니다.</p></div></li>
           </ul>
         </div>
         <div class="모둠">
@@ -534,17 +540,17 @@
       <div class="소제">프리캔버스 — 새 기능 ④</div>
       <div class="두단">
         <div>
-          <h2 class="기능제">홍보용 <span class="강">카드뉴스</span>는<br>사진이 없어도 나옵니다.</h2>
+          <h2 class="기능제">홍보용 <span class="강">카드뉴스</span>는<br>사진이 없어도 완성됩니다.</h2>
           <ul class="기능목">
             <li><span class="번호">하나</span>
               <div><h4>줄거리만 적으면 여러 장이 한 번에</h4>
               <p>주제와 하고 싶은 말을 적으면, 넘겨보는 카드 여러 장이 처음부터 끝까지 한 호흡으로 만들어집니다.</p></div></li>
             <li><span class="번호">둘</span>
               <div><h4>모든 장의 결이 같게</h4>
-              <p>색·글꼴·판짜임을 먼저 정해두고 그리기 때문에, 장마다 따로 노는 일이 없습니다.</p></div></li>
+              <p>색·글꼴·판짜임을 먼저 정해 두고 그리기 때문에, 장마다 분위기가 어긋나는 일이 없습니다.</p></div></li>
             <li><span class="번호">셋</span>
-              <div><h4>사진 없이도, 참고만 시켜도</h4>
-              <p>상품 사진이 아직 없으면 글만으로, 분위기만 빌리고 싶으면 참고용으로만 — 쓰임에 맞춥니다.</p></div></li>
+              <div><h4>사진 없이도, 분위기만 빌려도</h4>
+              <p>사진이 없으면 글만으로 만들고, 있다면 분위기를 참고하는 정도로만 쓸 수도 있습니다.</p></div></li>
           </ul>
         </div>
         <div class="모둠">
@@ -610,8 +616,8 @@
               <div><h4>결과물마다 다른 안내 순서</h4>
               <p>일반·의류·과일채소·카드뉴스·썸네일 — 만들려는 것에 맞는 안내가 따로 준비되어 있습니다.</p></div></li>
             <li><span class="번호">둘</span>
-              <div><h4>열 걸음짜리 친절</h4>
-              <p>사진 올리기부터 저장까지, 화면 위에서 한 걸음씩 짚어 주니 헤맬 틈이 없습니다.</p></div></li>
+              <div><h4>열 걸음의 안내</h4>
+              <p>사진 올리기부터 저장까지, 화면 위에서 한 걸음씩 짚어 주어 헤맬 틈이 없습니다.</p></div></li>
             <li><span class="번호">셋</span>
               <div><h4>언제든 다시 열어보기</h4>
               <p>첫 화면의 "사용법 보기" 하나면 언제든 처음부터 다시 안내를 받을 수 있습니다.</p></div></li>
@@ -710,7 +716,7 @@
           <div class="단계">네걸음</div>
           <div class="축"><div class="알 먹"></div></div>
           <div><span class="누가 회">셀러</span><h4>플랫폼에 올리기</h4>
-            <p class="풀이">완성본을 내려받아 그대로 등록 — 외주 없이 하루 안에 상품 하나가 끝납니다.</p></div>
+            <p class="풀이">완성본을 내려받아 그대로 등록합니다. 외주 없이, 하루 안에 끝나는 흐름입니다.</p></div>
         </div>
       </div>
       <div class="바닥"><span class="상표">소싱 → 이름 → 콘텐츠 → 등록</span><span class="쪽">16 / 17</span></div>
@@ -724,9 +730,9 @@
       <h2 class="표지제" style="font-size:clamp(28px,3.6vw,44px)">다음에 올릴 그 상품부터,<br>두 AI에게 맡겨 보세요.</h2>
       <div style="flex:1; min-height:0; display:flex; flex-direction:column; justify-content:center; gap:6px">
       <div class="요약띠">
-        <div class="요약알"><div class="수">하나<span>의 계정</span></div><h4>로그인은 한 번</h4><p>구글 계정 하나로 두 서비스를 오가며 씁니다.</p></div>
-        <div class="요약알"><div class="수">둘<span>의 승부</span></div><h4>발견과 설득</h4><p>걸리는 이름은 검색마스터, 사고 싶은 모습은 프리캔버스.</p></div>
-        <div class="요약알"><div class="수">여섯<span>의 새것</span></div><h4>여름 새 기능</h4><p>설명 입력·링크 소싱·영상 한국어화·상세 편집·카드뉴스·지우개.</p></div>
+        <div class="요약알"><div class="수">하나<span>의 계정</span></div><h4>로그인은 한 번</h4><p>구글 계정 하나로 두 서비스를 자유롭게 오갑니다.</p></div>
+        <div class="요약알"><div class="수">둘<span>의 승부</span></div><h4>발견과 설득</h4><p>검색에 걸리는 이름은 검색마스터가, 사고 싶어지는 모습은 프리캔버스가.</p></div>
+        <div class="요약알"><div class="수">여섯<span> 가지 기능</span></div><h4>이번 여름의 새것</h4><p>설명 입력 · 링크 소싱 · 영상 한국어화 · 상세 편집 · 카드뉴스 · 지우개.</p></div>
       </div>
       <div class="주소띠">
         <a class="주소패" href="https://ramiteacher.github.io/product-title-ai/" target="_blank" rel="noopener">
@@ -739,7 +745,7 @@
         </a>
       </div>
       </div>
-      <div class="끝인사" style="margin-top:0">고맙습니다.</div>
+      <div class="끝인사" style="margin-top:0">감사합니다.</div>
     </div>
   </section>
 
