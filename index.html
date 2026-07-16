@@ -89,11 +89,9 @@
   /* ---------- 요소 ---------- */
   .쌍카드{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:30px}
   .승부{border-radius:16px; padding:28px 30px 24px; box-shadow:var(--shadow-sm); border:1px solid var(--line-soft); background:var(--panel-strong)}
-  .승부 .글자표{font-family:var(--serif); font-size:40px; font-weight:700; line-height:1; margin-bottom:14px}
+  .승부 .글자표{font-size:32px; line-height:1; margin-bottom:14px}
   .승부.파{background:#f4f8fa; border-color:#d8e3ea}
-  .승부.파 .글자표{color:var(--accent)}
   .승부.모{border-color:var(--line)}
-  .승부.모 .글자표{color:var(--warm)}
   .승부 h3{font-size:20px; margin-bottom:3px}
   .승부 .역할{font-size:11.5px; font-weight:700; color:var(--ink-faint); letter-spacing:.06em}
   .승부 p{margin-top:11px; font-size:13px; color:var(--ink-muted); line-height:1.65; word-break:keep-all}
@@ -163,10 +161,8 @@
   .요약띠{display:flex; gap:16px; margin-top:28px; width:min(980px,94%)}
   .요약알{flex:1; background:var(--panel-strong); border:1px solid var(--line-soft); border-radius:14px;
     padding:20px 22px; text-align:left; box-shadow:var(--shadow-sm)}
-  .요약알 .수{font-family:var(--serif); font-size:26px; font-weight:700; color:var(--accent); line-height:1}
-  .요약알 .수 span{font-size:13px; color:var(--warm); margin-left:2px}
-  .요약알 h4{margin-top:9px; font-family:var(--sans); font-size:13.5px; font-weight:700; color:var(--ink-soft)}
-  .요약알 p{margin-top:5px; font-size:11.5px; color:var(--ink-muted); line-height:1.55; word-break:keep-all}
+  .요약알 h4{font-family:var(--sans); font-size:14.5px; font-weight:700; color:var(--ink-soft)}
+  .요약알 p{margin-top:7px; font-size:12px; color:var(--ink-muted); line-height:1.6; word-break:keep-all}
   .주소띠{display:flex; gap:16px; margin-top:20px; width:min(980px,94%)}
   .주소패{flex:1; text-decoration:none; display:flex; flex-direction:column; gap:4px; text-align:left;
     background:var(--chip-bg); border:1px solid var(--line); border-radius:12px; padding:15px 20px; transition:.15s}
@@ -227,13 +223,13 @@
       <h2 class="큰제">상품 하나를 팔려면,<br>셀러는 <span class="강">두 번</span> 이겨야 합니다.</h2>
       <div class="쌍카드">
         <div class="승부 파">
-          <div class="글자표">찾</div>
+          <div class="글자표">🔍</div>
           <h3>발견의 승부</h3>
           <div class="역할">검색 결과에 노출되기</div>
           <p>고객이 검색창에 친 바로 그 말에 내 상품이 걸려야 합니다.<br>이 싸움은 <b>검색마스터</b>가 맡습니다.</p>
         </div>
         <div class="승부 모">
-          <div class="글자표">사</div>
+          <div class="글자표">🛒</div>
           <h3>설득의 승부</h3>
           <div class="역할">클릭을 구매로 바꾸기</div>
           <p>들어온 고객이 스크롤을 내리다 결제 버튼을 누르게 해야 합니다.<br>이 싸움은 <b>프리캔버스</b>가 맡습니다.</p>
@@ -631,9 +627,9 @@
       <div class="표지라벨">오늘부터</div>
       <h2 class="표지제" style="font-size:clamp(28px,3.6vw,42px)">다음에 올릴 그 상품부터,<br>두 AI에게 맡겨 보세요.</h2>
       <div class="요약띠">
-        <div class="요약알"><div class="수">하나<span>의 계정</span></div><h4>로그인은 한 번</h4><p>구글 계정 하나로 두 서비스를 자유롭게 오갑니다.</p></div>
-        <div class="요약알"><div class="수">둘<span>의 승부</span></div><h4>발견과 설득</h4><p>검색에 걸리는 이름은 검색마스터가, 사고 싶어지는 모습은 프리캔버스가.</p></div>
-        <div class="요약알"><div class="수">여섯<span> 가지 기능</span></div><h4>새로 추가된 기능</h4><p>설명 입력 · 링크 소싱 · 영상 한국어화 · 상세 편집 · 카드뉴스 · 지우개.</p></div>
+        <div class="요약알"><h4>🔑 로그인은 한 번</h4><p>구글 계정 하나로 두 서비스를 자유롭게 오갑니다.</p></div>
+        <div class="요약알"><h4>🎯 발견과 설득, 두 번의 승부</h4><p>검색에 걸리는 이름은 검색마스터가, 사고 싶어지는 모습은 프리캔버스가.</p></div>
+        <div class="요약알"><h4>✨ 새로 추가된 여섯 가지 기능</h4><p>설명 입력 · 링크 소싱 · 영상 한국어화 · 상세 편집 · 카드뉴스 · 지우개.</p></div>
       </div>
       <div class="주소띠">
         <a class="주소패" href="https://ramiteacher.github.io/product-title-ai/" target="_blank" rel="noopener">
