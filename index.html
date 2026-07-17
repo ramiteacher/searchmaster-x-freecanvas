@@ -56,6 +56,12 @@
   .목록 .번{font-family:var(--serif);font-size:16.5px;font-weight:600;color:var(--청록);line-height:1.4}
   .목록 h4{font-size:14px;font-weight:700;color:var(--잉크);letter-spacing:-.01em}
   .목록 p{margin-top:4px;font-size:12.5px;color:var(--잉크3);line-height:1.6}
+  .채널표{margin-top:7px;border-top:1px solid var(--선2)}
+  .채널줄{display:grid;grid-template-columns:66px 58px 1fr;gap:10px;padding:5.5px 0;
+    border-bottom:1px solid var(--선2);align-items:baseline}
+  .채널줄 b{font-size:11.5px;color:var(--잉크)}
+  .채널줄 i{font-style:normal;font-size:10.5px;font-weight:700;color:var(--청록)}
+  .채널줄 span{font-size:11px;color:var(--잉크3);line-height:1.45;word-break:keep-all}
   .각주{margin-top:14px;padding-top:11px;border-top:1px solid var(--선);
     font-size:12px;color:var(--잉크3);line-height:1.62;word-break:keep-all}
   .각주 .별{color:var(--청록);font-weight:700;margin-right:5px}
@@ -424,7 +430,11 @@
               <p>"책상 위에 놓는 무선 충전 겸용 스탠드"처럼 한 줄만 적으면, 사진만으로는 놓치기 쉬운 재질과 용도까지 상품명에 담깁니다.</p></div></li>
             <li><span class="번">②</span>
               <div><h4>판매 채널별 상품명</h4>
-              <p>네이버쇼핑은 검색 노출 폭, 쿠팡은 구매 판단 키워드, 일반몰은 가독성 — 채널을 고르면 그에 맞춰 짓습니다.</p></div></li>
+              <div class="채널표">
+                <div class="채널줄"><b>네이버쇼핑</b><i>노출 폭</i><span>카테고리·용도·상황 키워드를 넓게, 탐색형 검색어까지</span></div>
+                <div class="채널줄"><b>쿠팡</b><i>구매 판단</i><span>첫머리에 상품 정체성부터, 색상·구성 등 구매 속성 중심</span></div>
+                <div class="채널줄"><b>일반몰</b><i>가독성</i><span>키워드 나열 티 없이 읽기 좋은 순서로</span></div>
+              </div></div></li>
             <li><span class="번">③</span>
               <div><h4>업로드·생성 화면 개선</h4>
               <p>사진을 올리면 바로 보이고, 생성 진행 상태도 화면에 그대로 표시됩니다.</p></div></li>
