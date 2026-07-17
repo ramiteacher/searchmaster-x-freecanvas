@@ -36,7 +36,7 @@
   .머리{display:flex;align-items:center;gap:18px;flex-shrink:0}
   .키커{font-size:11px;font-weight:700;letter-spacing:.24em;color:var(--청록);white-space:nowrap}
   .머리 .금{flex:1;height:1px;background:var(--선)}
-  .호{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--유령);line-height:1;letter-spacing:.02em}
+  .호{font-family:var(--serif);font-size:clamp(22px,2.5vw,34px);font-weight:600;color:var(--유령);line-height:1;letter-spacing:.02em}
   .꼬리{flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;
     border-top:1px solid var(--선);padding-top:11px;margin-top:12px;
     font-size:10.5px;color:var(--잉크4);letter-spacing:.05em}
@@ -74,7 +74,7 @@
   .몸{flex:1;min-height:0;display:grid;gap:52px;align-items:center;margin:14px 0 6px}
 
   /* ── 표지 ───────────── */
-  .표지제{font-family:var(--serif);font-size:82px;font-weight:700;letter-spacing:-.03em;line-height:1.14;margin-top:6px}
+  .표지제{font-family:var(--serif);font-size:clamp(44px,min(6.1vw,9.6vh),82px);font-weight:700;letter-spacing:-.03em;line-height:1.14;margin-top:6px}
   .표지제 em{font-style:normal;font-weight:400;color:var(--청록)}
   .표지중간{display:flex;justify-content:space-between;align-items:flex-end;gap:60px;margin-top:30px}
   .표지부{font-size:16px;color:var(--잉크2);font-weight:600;letter-spacing:-.01em}
@@ -160,7 +160,7 @@
   .단계칸::before{content:"";position:absolute;top:0;left:0;right:-44px;height:1px;background:var(--선)}
   .단계칸:last-child::before{right:0}
   .단계칸::after{content:"";position:absolute;top:-3.5px;left:0;width:8px;height:8px;border-radius:50%;background:var(--청록)}
-  .단계수{font-family:var(--serif);font-size:58px;font-weight:600;line-height:1;color:var(--잉크);letter-spacing:-.02em}
+  .단계수{font-family:var(--serif);font-size:clamp(38px,4.3vw,58px);font-weight:600;line-height:1;color:var(--잉크);letter-spacing:-.02em}
   .단계수 small{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--잉크4);margin-left:6px;letter-spacing:.08em}
   .단계칸 .누가{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.12em;
     padding:4px 11px;border-radius:2px;margin-top:16px}
@@ -172,7 +172,7 @@
 
   /* ── 15장 맺음 ───────────── */
   .맺음판{align-items:center;text-align:center;justify-content:center;display:flex;flex-direction:column;flex:1;min-height:0}
-  .맺음제{font-family:var(--serif);font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:1.24}
+  .맺음제{font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1.24}
   .요약렬{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;width:min(1000px,100%);margin-top:40px;text-align:left}
   .요약칸{position:relative;padding-top:16px}
   .요약칸::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--선)}
@@ -195,6 +195,22 @@
   .힌트 b{color:var(--청록)}
   .진행{position:fixed;top:0;left:0;height:3px;z-index:70;width:0;background:var(--청록);transition:width .18s}
 
+  @media (min-width:861px) and (max-width:1240px){
+    .판{aspect-ratio:auto;max-height:none;min-height:min(82vh,900px);padding:34px 38px 26px}
+    .몸{gap:34px !important}
+    .몸[style*="grid-template-columns"]{grid-template-columns:1fr 1fr !important}
+    [style*="grid-template-columns:1fr 330px"]{grid-template-columns:1fr 300px !important}
+    [style*="grid-template-columns:1fr 210px"]{grid-template-columns:1fr 190px !important}
+    [style*="display:grid"][style*="380px 1fr"]{grid-template-columns:1fr 1.6fr !important}
+    [style*="font-size:40px"]{font-size:31px !important}
+    [style*="font-size:34px"]{font-size:27px !important}
+    [style*="font-size:26px"]{font-size:22px !important}
+    [style*="width:min(850px"]{width:min(760px,94%) !important}
+    .표지중간{gap:34px}
+    .단계들{gap:30px}
+    .단계칸::before{right:-30px}
+    .요약렬{gap:26px}
+  }
   @media (max-width:860px){
     .덱{scroll-snap-type:none}
     .장{min-height:auto;padding:14px 10px}
